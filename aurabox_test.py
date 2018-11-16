@@ -13,14 +13,6 @@ import sys
 addr = None
 mock = False
 
-def read_data(data):
-    bin_data = None
-    try:
-        bin_data = bytearray.fromhex(data)
-    except Exception as e:
-        print(e)
-    return bin_data
-
 if len(sys.argv) < 2:
     print("No device specified. Searching all nearby bluetooth devices for the SPP service")
 else:
